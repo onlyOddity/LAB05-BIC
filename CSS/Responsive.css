@@ -30,6 +30,14 @@
     color: var(--Second-color);
   }
 
+  /* Styles de focus */
+  .Bouton:focus,
+  .boutonBuyM:focus {
+    outline: 2px solid var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
+    transition: outline 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
   .TitreExplicatif {
     text-align: center;
   }
@@ -93,12 +101,6 @@
     z-index: -10;
   }
 
-  .Bouton {
-    color: var(--Black-color);
-    transition: color 0.3s ease-in-out;
-    color: var(--Second-color);
-  }
-
   .BoxBic {
     grid-column: 1/8;
   }
@@ -120,7 +122,16 @@
   .ShopBanniere {
     display: grid;
   }
+
   .ZIndexNegatif {
     z-index: -10;
+  }
+
+  /* Styles de focus */
+  .Bouton:focus,
+  .boutonBuy:focus {
+    outline: 2px dashed var(--main-color);
+    outline-offset: 4px;
+    box-shadow: 0 0 8px var(--main-color);
   }
 }

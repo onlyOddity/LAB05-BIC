@@ -17,7 +17,7 @@ main {
   transition: 1s ease-in-out;
 }
 
-/* Tailles de caracatere */
+/* Tailles de caractère */
 p {
   font-size: 9pt;
 }
@@ -56,20 +56,6 @@ p {
 
 /* - COULEUR - - - - - - - - - - - - - */
 
-/*
-	Hex	#004aff
-	RGB	0, 74, 255
-	HSB	223°, 100%, 100%
-	CMYK 100, 71, 0, 0
-*/
-
-/*
-	Hex	#e9eaeb
-	RGB	233, 234, 235
-	HSB	210°, 0.9, 92.2
-	CMYK 1, 0, 0, 8
-*/
-
 :root {
   --main-color: #004aff;
   --Second-color: #e9eaeb;
@@ -90,12 +76,24 @@ p {
   transition: color 0.3s ease-in-out;
 }
 
+/* Styles de focus */
+.Bouton:focus {
+  outline: 2px solid var(--main-color);
+  box-shadow: 0 0 8px var(--main-color);
+  transition: outline 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 .BackgrounBouton {
   background-color: var(--Second-color);
 }
 
 a {
   text-decoration: none;
+}
+
+a:focus {
+  outline: 2px dashed var(--main-color);
+  outline-offset: 4px;
 }
 
 /* - HOMEPAGE- - - - - - - - - - - - */
@@ -110,6 +108,11 @@ a {
   transition: opacity 1s ease-in-out;
 }
 
+.Pellicule h2:focus {
+  outline: 2px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
+}
+
 /* - SHOP - - - - - - - - - - - - - */
 /* - Baniere - SHOP */
 
@@ -119,10 +122,21 @@ a {
   transition: transform 0.4s ease-in-out;
 }
 
+.ShopBanniere:focus {
+  outline: 2px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
+}
+
 .boutonBuy {
   background-color: var(--main-color);
   color: var(--Second-color);
   cursor: pointer;
+}
+
+.boutonBuy:focus {
+  outline: 2px solid var(--Second-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 5px var(--Second-color);
 }
 
 .BackBlur {
@@ -138,9 +152,18 @@ a {
   border-top: 0.5px solid var(--Black-color);
 }
 
+.BoxAchat:focus {
+  outline: 2px solid var(--main-color);
+}
+
 .boutonSelect {
   background-color: var(--main-color);
   color: var(--Second-color);
+}
+
+.boutonSelect:focus {
+  outline: 2px dashed var(--Second-color);
+  box-shadow: 0 0 5px var(--main-color);
 }
 
 .ImageBoxAchat {
@@ -151,12 +174,21 @@ a {
   );
 }
 
+.ImageBoxAchat img:focus {
+  outline: 2px solid var(--main-color);
+  box-shadow: 0 0 8px var(--main-color);
+}
+
 .InfoBoxAchat {
   background-color: var(--Second-color);
 }
 
 .FlecheBouton {
   cursor: pointer;
+}
+
+.FlecheBouton:focus {
+  outline: 2px solid var(--main-color);
 }
 
 /* - Panier - LayoutBox - SHOP */
@@ -182,6 +214,10 @@ a {
   grid-template-rows: 100px 450px;
 }
 
+.BoxBic:focus {
+  outline: 2px dashed var(--main-color);
+}
+
 .BoxBic .Txt {
   grid-column: 1/3;
   grid-row: 1/2;
@@ -194,7 +230,6 @@ a {
   grid-row: 2/3;
   height: 100%;
   width: 100%;
-  background-color: black;
   background-color: var(--Second-color);
 }
 
@@ -204,10 +239,18 @@ a {
   object-fit: cover;
 }
 
+.BoxBic .Img img:focus {
+  outline: 2px solid var(--main-color);
+}
+
 .BigBox {
   grid-column: 1/8;
   height: 860px;
   margin-top: 180px;
+}
+
+.BigBox:focus {
+  outline: 2px solid var(--main-color);
 }
 
 .BigBox .Img {
@@ -224,9 +267,18 @@ a {
   height: 100%;
 }
 
+.BigBox .Img img:focus {
+  outline: 2px dashed var(--main-color);
+}
+
 /* - Spéciaux - - - - - - - - - - - - - */
 
 .TextInformatif {
   transition: opacity 1s ease-in-out;
   cursor: pointer;
+}
+
+.TextInformatif:focus {
+  outline: 2px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
 }

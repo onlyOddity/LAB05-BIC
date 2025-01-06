@@ -306,3 +306,23 @@ main {
   right: 0;
   text-align: center;
 }
+
+/* - Focus Styles - - - - - - - - - - - - - */
+:focus {
+  outline: 2px dashed var(--main-color); /* Contour visible et accessible */
+  outline-offset: 4px; /* Décalage pour ne pas superposer avec le contenu */
+}
+
+.Bouton:focus,
+.boutonBuy:focus,
+.boutonSelect:focus,
+.FlecheBouton:focus {
+  outline: 2px solid var(--Second-color);
+  background-color: var(--main-color); /* Ajouter un contraste visuel */
+  box-shadow: 0 0 8px var(--main-color); /* Effet visuel pour le focus */
+}
+
+/* Suppression du contour natif pour ceux qui ne doivent pas recevoir le focus */
+:focus:not(:focus-visible) {
+  outline: none;
+}
